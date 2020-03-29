@@ -1,0 +1,23 @@
+//plugins {
+//    id 'org.springframework.boot' version '2.1.13.RELEASE'
+//    id 'io.spring.dependency-management'
+//    id 'java'
+//}
+//
+//repositories {
+//    mavenCentral()
+//}
+
+dependencies {
+    implementation 'org.springframework:spring-context:5.1.14.RELEASE'
+//    implementation project(':web')
+//    implementation 'org.springframework.boot:spring-boot-starter'
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+//        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+//    }
+}
+
+test {
+    useJUnitPlatform()
+}

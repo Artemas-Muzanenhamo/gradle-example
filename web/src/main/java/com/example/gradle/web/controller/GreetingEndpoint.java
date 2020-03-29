@@ -15,7 +15,7 @@ public class GreetingEndpoint {
     }
 
     @GetMapping
-    public String greet(@RequestParam String name) {
+    public String greet(@RequestParam(required = false) String name) {
         return greetingService.greet(name);
     }
 }

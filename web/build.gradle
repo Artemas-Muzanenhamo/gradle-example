@@ -16,3 +16,18 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+build {
+	println("Task depends on this being run")
+}
+
+task someTask {
+	println("Task will be called after I hope..")
+}
+
+bootRun {
+	dependsOn build
+	doFirst {
+		someTask
+	}
+}

@@ -18,11 +18,11 @@ test {
 }
 
 build {
-	println("Task depends on this being run")
+	println("This task should be executed first")
 }
 
 task someTask {
-	println("Task will be called after I hope..")
+	println("This task should be executed after the first task")
 }
 
 bootRun {

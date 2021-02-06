@@ -37,4 +37,11 @@ subprojects {
         sourceCompatibility = 11
         targetCompatibility = 11
     }
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events = ["passed", "failed", "skipped"]
+        }
+    }
 }

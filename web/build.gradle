@@ -5,28 +5,11 @@ plugins {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation project(':service')
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.6.1'
 }
 
 test {
 	useJUnitPlatform()
 	testLogging {
 		events = ["passed", "failed", "skipped"]
-	}
-}
-
-build {
-	println("This task should be executed first")
-}
-
-task someTask {
-	println("This task should be executed after the first task")
-}
-
-bootRun {
-	dependsOn build
-	doFirst {
-		someTask
 	}
 }

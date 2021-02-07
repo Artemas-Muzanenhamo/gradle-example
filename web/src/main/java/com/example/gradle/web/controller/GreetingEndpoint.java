@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingEndpoint {
 
-    private GreetingService greetingService;
+    private final GreetingService greetingService;
 
     public GreetingEndpoint(GreetingService greetingService) {
         this.greetingService = greetingService;
